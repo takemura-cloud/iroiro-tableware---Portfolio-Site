@@ -24,9 +24,6 @@
 メインビジュアル  
 ![トップページ](iroiro_tableware/screenshots/pc_main-visual.png)
 
-スマホ表示  
-![スマホ表示](iroiro_tableware/screenshots/sp_main-visual.png)
-
 ## 制作期間
 制作中
 
