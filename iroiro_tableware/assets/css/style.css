@@ -3,14 +3,25 @@
 /*==========================
 common
 ==========================*/
+
+:root {
+    --contentWidth: 91.4%;
+    --contentPadding: 4.2%;
+    --contentPaddingVertical: 20px;
+    /*  */
+}
+
 html {
     font-size: 62.5%;
 }
 
 body {
+    padding: var(--contentPaddingVertical)
+             var(--contentPadding) 0
+             var(--contentPadding);
     font-family:
         'Noto Sans JP',
-        Arial,
+        'Bagel Fat One',
         sans-serif;
     font-style: normal;
     color: #2d2d2d;
@@ -18,15 +29,53 @@ body {
     line-height: 1.5;
 }
 
-
 img {
     max-width: 100%;
     height: auto;
 }
 
-.btn:hover {
-    opacity: 0.5;
+.section-title {
+    margin-bottom: 54px;
+    text-align: left;
+    font-family: 'Bagel Fat One';
+    font-size: 2.6rem;
+    line-height: 1.3;
+    letter-spacing: 0.15em;
 }
+
+.c-btn {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    margin:2em auto ;
+    padding: 2px 0;
+    border: solid 5px #2d2d2d;
+    font-family: 'Bagel Fat One';
+    font-size: 2rem;
+    letter-spacing: 0.04em;
+}
+
+.c-nav-link {
+    font-family: Bagel Fat One,
+                 sans-serif;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #2d2d2d;
+    transition: opacity 0.3s;
+}
+
+.c-nav-link:hover {
+    opacity: 0.7;
+}
+
+/* SNSアイコン用共通パーツ */
+.c-sns-link {
+    display: inline-flex;
+    align-items: center;
+    width: 24px;
+    height: auto;
+}
+
 
 /*==========================
 header
@@ -40,4 +89,416 @@ header
     height: 1px;
     margin: -1px;
     padding: 0;
+}
+
+.header {
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section {
+    margin-bottom: 2em;/* ★ */
+}
+
+.site-title {
+    width: 150px;
+}
+
+.header__topic,
+.footer__topic {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+}
+
+/* .nav初期表示 */
+.nav {
+    padding-top: var(--contentPaddingVertical);
+    padding-right: var(--contentPadding);
+    padding-left: var(--contentPadding);
+    background: #ffffff;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+}
+
+.nav__header {
+    margin-bottom: 20px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__btn--open {
+    width: 36px;
+}
+
+/* .nav.active表示 */
+.nav.active {
+    transform: translateX(0);
+}
+
+.nav__topic {
+    width: 150px;
+    height: auto;
+}
+
+.nav__btn--close img {
+    width: 42px;
+    height: auto;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 33px;
+}
+
+.nav__item {
+    margin-bottom: 44px;
+}
+
+.nav__sns-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav__link--instagram  img,
+.nav__link--facebook img {
+    width: 19px;
+}
+
+
+/*==========================
+main visual
+==========================*/
+.main-visual__slide img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border:solid 2px  #2d2d2d;
+}
+
+
+/*==========================
+iroiro instagram
+==========================*/
+.section--iroiro-instagram {
+    padding: 20px 15px;
+    border:solid 7px  #F2676B;
+}
+
+.iroiro-instagram__images {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 16px;
+    list-style: none;
+}
+
+.iroiro-instagram__link {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.iroiro-instagram__text {
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    font-size: 1.4em;
+    letter-spacing: -0.05em;
+}
+
+.iroiro-instagram__text--rankings {   
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: clamp(1rem,4vw,1.2rem);
+}
+
+.iroiro-instagram__text--exhibit {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 2em 0;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.iroiro-instagram__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 143/151;
+    object-fit: cover;
+}
+
+.iroiro-instagram__btn--instagram {
+    width: 18px;
+    margin-right: 10px;
+}
+
+
+/*==========================
+osusume
+==========================*/
+.section--osusume {
+    background-color: #6BADD9;
+    margin-left: calc(var(--contentPadding)* -1);
+    margin-right: calc(var(--contentPadding)* -1);
+    padding: 60px var(--contentPadding);
+}
+
+.iroiro-osusume__contents {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.iroiro-osusume__image {
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border:solid 2px  #2d2d2d;
+}
+
+.iroiro-osusume__product-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    width: 170px;
+    height: 100px;
+    margin: 0 auto 30px;
+    font-size: 2.6em;
+    font-weight: 700;
+    text-align: center;
+    border:solid 2px #2d2d2d;
+    background-color: #ffffff;
+}
+
+.iroiro-osusume__description {
+    margin-bottom: 30px;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.iroiro-osusume__btn {
+    width: 170px;
+    margin: 0 auto 2em;
+}
+
+/* 矢印の共通設定 */
+.iroiro-osusume__arrow {
+    position: absolute;
+    top: 60%;
+    background: none;
+    border: none;
+    font-size: 5em;
+    cursor: pointer;z-index: 10;
+
+}
+
+/* 左矢印*/
+.iroiro-osusume__arrow--prev {
+    left: 47px;
+}
+
+/* 右矢印 */
+ .iroiro-osusume__arrow--next{
+    right: 47px;
+} 
+
+/*==========================
+about
+==========================*/
+.section--about {
+    margin-bottom: 100px;
+    padding: 20px 15px;
+    border:solid 7px  #22AD77;
+}
+
+.about__concept-list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 246px;
+    height: 130px;
+    margin:0 auto 6em;
+    text-align: center;
+    list-style: none;
+}
+
+.about__concept-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 84px;
+    border:solid 2px #2d2d2d;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color:rgba(255, 255, 255, 0.7) ;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.about__concept-item--blue {
+    color: #1B8599;
+    left: 0;
+    z-index: 1;
+}
+
+.about__concept-item--yellow {
+    color: #F3B100;
+    left: 52px;
+    top: 45px;
+    z-index: 2;
+}
+
+.about__concept-item--red {
+    color: #F45024;
+    left: 106px;
+    z-index: 3;
+}
+
+.about__concept-item--green {
+    color: #1C9730;
+    left: 162px;
+    top: 45px;
+    z-index: 4;
+}
+
+.about__concept-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+/*==========================
+news
+==========================*/
+.section--news {
+    margin-bottom: 8em;
+}
+
+.section-title--news {
+    display: flex;
+    justify-content: center;
+}
+
+.news__list {
+    padding: 2em 4em;
+    border-top:solid 1px #2d2d2d;
+    border-bottom:solid 1px #2d2d2d;
+}
+
+.news__item {
+    margin-bottom: 15px;
+}
+
+.news__item:last-child {
+    margin-bottom: 0;
+}
+
+.news__link {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/*==========================
+footer
+==========================*/
+.footer {
+     background-color: #ffffff;
+    margin-left: calc(var(--contentPadding)* -1);
+    margin-right: calc(var(--contentPadding)* -1);
+    padding: 60px var(--contentPadding);
+}
+
+.footer__nav {
+    margin-bottom: 6em;
+}
+
+.footer__list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    gap: 16px;
+    list-style: none;
+}
+
+.footer__item--sns {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: auto;
+}
+
+.copy {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* ページトップボタン */
+.c-pagetop-btn {
+    position: fixed;
+    right: -80px; /* 最初は画面の外 */
+    bottom: 50px; /* 位置は下の方が見やすいので調整 */
+    z-index: 100;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 60px;
+    height: 80px;
+    background-color: #FEFFDC; 
+    color: #2d2d2d;
+    border: none;
+    border-radius: 10px 0 0 10px; 
+    border:solid 2px #2d2d2d;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+/* 表示された時の動き */
+.c-pagetop-btn.is-show {
+    opacity: 1;
+    visibility: visible;
+    right: 0; 
+}
+
+/* 山型アイコン */
+.c-pagetop-btn__icon {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: solid 2px #2d2d2d;
+    border-left: solid 2px #2d2d2d;
+    transform: rotate(45deg);
+    margin-bottom: 8px; 
+    margin-top: 10px;
+}
+
+.c-pagetop-btn__text {
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
 }
