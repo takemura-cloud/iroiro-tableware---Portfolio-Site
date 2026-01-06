@@ -455,8 +455,8 @@ footer
 /* ページトップボタン */
 .c-pagetop-btn {
     position: fixed;
-    right: -80px; /* 最初は画面の外 */
-    bottom: 50px; /* 位置は下の方が見やすいので調整 */
+    right: -80px; 
+    bottom: 50px; 
     z-index: 100;
     
     display: flex;
