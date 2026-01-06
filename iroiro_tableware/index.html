@@ -21,8 +21,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="assets/css/destyle.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/top.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- swiper -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -35,25 +37,25 @@
                 </a>
             </h1>
             <!-- .header__btn -->
-            <button class="nav__btn nav__btn--open" type="button" aria-label="メニューを開く"><img src="assets/images/btn-menu.svg" alt=""></button>
+            <button class="nav__btn nav__btn--open" type="button" aria-label="メニューを開く"><img src="assets/images/parts/btn_menu.svg" alt=""></button>
             <nav class="nav">
                 <div class="nav__header">
-                    <p class="nav__topic"><a href="index.html"><img class="header__topic" src="assets/images/parts/logo.svg" alt=""></a></p>
-                    <button class="nav__btn nav__btn--close" type="button" aria-label="メニューを閉じる"><img src="assets/images/btn-close.svg" alt=""></button>
+                    <div class="nav__topic"><a href="index.html"><img class="header__topic" src="assets/images/parts/logo.svg" alt=""></a></div>
+                    <button class="nav__btn nav__btn--close" type="button" aria-label="メニューを閉じる"><img src="assets/images/parts/btn_close.svg" alt=""></button>
                 </div>
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#about">ABOUT</a></li>
-                    <li class="nav__item"><a href="#product">PRODUCT</a></li>
-                    <li class="nav__item"><a href="#">SHOPLIST</a></li>
-                    <li class="nav__item"><a href="#news">NEWS</a></li>
-                    <li class="nav__item"><a href="#">CONTACT</a></li>
+                    <li class="nav__item"><a href="#about" class="c-nav-link">ABOUT</a></li>
+                    <li class="nav__item"><a href="#product" class="c-nav-link">PRODUCT</a></li>
+                    <li class="nav__item"><a href="#" class="c-nav-link">SHOPLIST</a></li>
+                    <li class="nav__item"><a href="#news" class="c-nav-link">NEWS</a></li>
+                    <li class="nav__item"><a href="#" class="c-nav-link">CONTACT</a></li>
                     <li class="nav__item">
                         <div class="nav__sns-links">
-                            <a href="#"  class="c-instagram-btn nav__link--instagram">
-                                <img src="assets/images/parts/icon_instagram.svg" alt="イロイロ・テーブルウェア公式インスタグラムを見る">
-                            </a>
-                            <a href="#"  class="c-facebook-btn nav__link--facebook">
+                            <a href="#"  class="c-sns-link nav__link--facebook">
                                 <img src="assets/images/parts/icon_facebook.svg" alt="イロイロ・テーブルウェア公式フェイスブックを見る">
+                            </a>
+                            <a href="#"  class="c-sns-link nav__link--instagram">
+                                <img src="assets/images/parts/icon_instagram.svg" alt="イロイロ・テーブルウェア公式インスタグラムを見る">
                             </a>
                         </div>
                     </li>
@@ -63,18 +65,21 @@
         <main class="main">
             <article class="article">
                <!-- main visual -->
-                <section class="main-visual" role="region" aria-label="メインビジュアル">
-                    <ul class="main-visual__slides" aria-roledescription="carousel">
-                        <li class="main-visual__slide is-active" aria-hidden="false">
-                            <img src="assets/images/photo/main_visual-01.jpeg" alt="俯瞰の視点で、カラフルな平皿が横一列に並んでいる">
-                        </li>
-                        <li class="main-visual__slide" aria-hidden="true">
-                            <img src="assets/images/photo/main_visual-02.jpeg" alt="色とりどりのサーモマグが浮かんでいる">
-                        </li>
-                        <li class="main-visual__slide" aria-hidden="true">
-                            <img src="assets/images/photo/main_visual-03.jpeg" alt="水色のテーブルに様々な色のアイスキャンディーを載せた平皿が所狭しと並んでいる">
-                        </li>
-                    </ul>
+                <section id="main-visual" class="section section--main-visual" role="region" aria-label="メインビジュアル">
+                    <div class="swiper main-visual__swiper">
+                        <ul class="swiper-wrapper main-visual__slides" aria-roledescription="carousel">
+                            <li class="swiper-slide main-visual__slide is-active" aria-hidden="false">
+                                <img src="assets/images/photo/main_visual-01.jpeg" alt="俯瞰の視点で、カラフルな平皿が横一列に並んでいる">
+                            </li>
+                            <li class="swiper-slide main-visual__slide" aria-hidden="true">
+                                <img src="assets/images/photo/main_visual-02.jpeg" alt="色とりどりのサーモマグが浮かんでいる">
+                            </li>
+                            <li class="swiper-slide 
+                            main-visual__slide" aria-hidden="true">
+                                <img src="assets/images/photo/main_visual-03.jpeg" alt="水色のテーブルに様々な色のアイスキャンディーを載せた平皿が所狭しと並んでいる">
+                            </li>
+                        </ul>
+                    </div>
                 </section>
                 <!-- iroiro instagram -->
                 <section id="iroiro-instagram" class="section section--iroiro-instagram">
@@ -82,91 +87,93 @@
                     <ul class="iroiro-instagram__images">
                         <li class="iroiro-instagram__item">
                             <a href="#" class="iroiro-instagram__link">
-                                <img src="assets/images/photo/insta_01.jpeg" alt="コーヒーカップのキーホルダーの投稿を見る">
+                                <img src="assets/images/photo/insta_01.jpeg" class="iroiro-instagram__img" alt="コーヒーカップのキーホルダーの投稿を見る">
                             </a>
                         </li>
                         <li class="iroiro-instagram__item">
                             <a href="#" class="iroiro-instagram__link">
-                                <img src="assets/images/photo/insta_02.jpeg" alt="陶器のサラダボウル、カップの投稿を見る" loading="lazy">
+                                <img src="assets/images/photo/insta_02.jpeg" class="iroiro-instagram__img" alt="陶器のサラダボウル、カップの投稿を見る" loading="lazy">
                             </a>
                         </li>
                         <li class="iroiro-instagram__item">
                             <a href="#" class="iroiro-instagram__link">
-                                <img src="assets/images/photo/insta_03.jpeg" alt="ビタミンカラーの平皿の投稿を見る" loading="lazy">
+                                <img src="assets/images/photo/insta_03.jpeg" class="iroiro-instagram__img" alt="ビタミンカラーの平皿の投稿を見る" loading="lazy">
                             </a>
                         </li>
                         <li class="iroiro-instagram__item">
                             <a href="#" class="iroiro-instagram__link">
-                                <img src="assets/images/photo/insta_04.jpeg" alt="水色のプレートの使用例の投稿を見る" loading="lazy">
+                                <img src="assets/images/photo/insta_04.jpeg" class="iroiro-instagram__img" alt="水色のプレートの使用例の投稿を見る" loading="lazy">
                             </a>
                         </li>
                         <li class="iroiro-instagram__item">
                             <a href="#" class="iroiro-instagram__link">
-                                <img src="assets/images/photo/insta_05.jpeg" alt="人気商品ランキングの投稿を見る" loading="lazy">
+                                <span class="iroiro-instagram__text iroiro-instagram__text--rankings">iroiro tableware<br>人気商品ランキング</span>
+                                <img src="assets/images/photo/insta_05.jpeg" class="iroiro-instagram__img" alt="人気商品ランキングの投稿を見る" loading="lazy">
                             </a>
                         </li>
                         <li class="iroiro-instagram__item">
                             <a href="#" class="iroiro-instagram__link">
-                                <img src="assets/images/photo/insta_06.jpeg" alt="展示会出展のお知らせの投稿を見る" loading="lazy">
+                                <span class="iroiro-instagram__text iroiro-instagram__text--exhibit">展示会<br>出店のおしらせ</span>
+                                <img src="assets/images/photo/insta_06.jpeg" class="iroiro-instagram__img" alt="展示会出展のお知らせの投稿を見る" loading="lazy">
                             </a>
                         </li>
                     </ul>
-                    <a href="#" class="iroiro-instagram__btn iroiro-instagram__btn--follow"><img class="iroiro-instagram__btn--instagram" src="assets/images/parts/icon_instagram.svg" alt="">FOLLOW ME</a>
+                    <a href="#" class="c-btn iroiro-instagram__btn--follow"><img class="iroiro-instagram__btn--instagram" src="assets/images/parts/icon_instagram.svg" alt="">FOLLOW ME</a>
                 </section>
                 <!-- osusume -->
                 <section id="osusume" class="section section--osusume">
                     <h2 class="section-title">iroiro<br>osusume</h2>
-                    <div class="iroiro-osusume__contents">
-                        <div class="iroiro-osusume__controls">
-                            <!-- nav + moreボタン -->
-                            <div class="iroiro-osusume__header">
-                                <div class="iroiro-osusume__nav">
-                                    <button class="iroiro-osusume__arrow iroiro-osusume__arrow--prev" type="button" aria-controls="slide-items" aria-label="前へ">&lt;</button>
-                                    <button class="iroiro-osusume__arrow iroiro-osusume__arrow--next" type="button" aria-controls="slide-items" aria-label="次へ">&gt;</button>
-                                </div>
-                                <a href="#" class="c-more-btn iroiro-osusume__btn">AND MORE</a>
-                            </div>
-                        </div>
-                        <ul class="iroiro-osusume__items" id="slide-items">
-                            <li class="iroiro-osusume__item">
-                                <h3 class="iroiro-osusume__product-name">カップ＆<br>ソーサー</h3>
+                    <div class="iroiro-osusume__contents swiper iroiro-osusume__swiper">
+                        <ul class="iroiro-osusume__items swiper-wrapper" id="slide-items">
+                            <li class="iroiro-osusume__item swiper-slide">
                                 <div class="iroiro-osusume__body">
                                     <img class="iroiro-osusume__image" src="assets/images/photo/osusume_cupandsaucer.jpeg" alt="カップ＆ソーサー">
                                     <p class="iroiro-osusume__description">オレンジとイエローのカップ＆ソーサーは、朝食やティータイムにぴったり。気分まであたたかくなる組み合わせです。</p>
                                 </div>
+                                <h3 class="iroiro-osusume__product-name">
+                                    カップ＆<br>ソーサー
+                                </h3>
                             </li>
-                            <li class="iroiro-osusume__item">
-                                <h3 class="iroiro-osusume__product-name">マグカップ<br>各種</h3>
+                            <li class="iroiro-osusume__item swiper-slide">
                                 <div class="iroiro-osusume__body">
                                     <img class="iroiro-osusume__image" src="assets/images/photo/osusume_mug.jpeg" alt="マグカップ各種">
                                     <p class="iroiro-osusume__description">深みのあるグリーンからやさしいパステルまで、いろいろなマグカップをラインナップ。ほかの色やフォルムもご用意しております。コーヒータイムにぜひ。</p>
                                 </div>
+                                <h3 class="iroiro-osusume__product-name">マグカップ<br>各種</h3>
                             </li>
-                            <li class="iroiro-osusume__item">
-                                <h3 class="iroiro-osusume__product-name">お猪口<br>各種</h3>
+                            <li class="iroiro-osusume__item swiper-slide">
                                 <div class="iroiro-osusume__body">
                                     <img class="iroiro-osusume__image" src="assets/images/photo/osusume_ochoko.jpeg" alt="お猪口各種">
                                     <p class="iroiro-osusume__description">パステルカラーの個性豊かなお猪口。日本酒はもちろん、前菜やデザートにも使える、自由な発想が似合う器です。</p>
                                 </div>
+                                <h3 class="iroiro-osusume__product-name">お猪口<br>各種</h3>
                             </li>
                         </ul>
+                        <button class="iroiro-osusume__arrow iroiro-osusume__arrow--prev" type="button" aria-controls="slide-items" aria-label="前へ">&lt;</button>
+                        <button class="iroiro-osusume__arrow iroiro-osusume__arrow--next" type="button" aria-controls="slide-items" aria-label="次へ">&gt;</button>
+                        <div class="iroiro-osusume__controls">
+                            <!-- nav + moreボタン -->
+                            <div class="iroiro-osusume__header">
+                                <a href="#" class="c-btn iroiro-osusume__btn">AND MORE</a>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <!-- about -->
                 <section id="about" class="section section--about">
                     <h2 class="section-title">ABOUT<br>iroiro<br>tableware</h2>
                     <ul class="about__concept-list">
-                        <li class="about__concept-item">つかう<br>楽しみ</li>
-                        <li class="about__concept-item">彩る<br>ひととき</li>
-                        <li class="about__concept-item">うつわ<br>ラブ</li>
-                        <li class="about__concept-item">つながる<br>うつわ</li>
+                        <li class="about__concept-item about__concept-item--blue">つかう<br>楽しみ</li>
+                        <li class="about__concept-item about__concept-item--yellow">彩る<br>ひととき</li>
+                        <li class="about__concept-item about__concept-item--red">うつわ<br>ラブ</li>
+                        <li class="about__concept-item about__concept-item--green">つながる<br>うつわ</li>
                     </ul>
-                    <p>今日はどの色にしよう。<br>器ひとつで、気分も食卓も カラフルに。<br>iroiroは暮らしをもっと明るくするブランドです。</p>
-                    <a href="#" class="c-more-btn about__btn">AND MORE</a>
+                    <p class="about__concept-text">今日はどの色にしよう。<br>器ひとつで、気分も食卓も カラフルに。<br>iroiroは暮らしをもっと明るくするブランドです。</p>
+                    <a href="#" class="c-btn about__btn">AND MORE</a>
                 </section>
                 <!-- news -->
                  <section id="news" class="section section--news">
-                    <h2 class="section-title">NEWS</h2>
+                    <h2 class="section-title section-title--news">NEWS</h2>
                     <ul class="news__list">
                         <li class="news__item">
                             <a href="#" class="news__link">
@@ -193,18 +200,16 @@
         <footer class="footer">
             <nav class="footer__nav">
                 <ul class="footer__list">
-                    <li class="footer__item"><a href="#about">ABOUT</a></li>
-                    <li class="footer__item"><a href="#product">PRODUCT</a></li>
-                    <li class="footer__item"><a href="#">SHOPLIST</a></li>
-                    <li class="footer__item"><a href="#news">NEWS</a></li>
-                    <li class="footer__item"><a href="#">CONTACT</a></li>
-                    <li class="footer__item">
-                        <a href="#"  class="c-instagram-btn footer__link--instagram">
+                    <li class="footer__item"><a href="#about" class="c-nav-link">ABOUT</a></li>
+                    <li class="footer__item"><a href="#product" class="c-nav-link">PRODUCT</a></li>
+                    <li class="footer__item"><a href="#" class="c-nav-link">SHOPLIST</a></li>
+                    <li class="footer__item"><a href="#news" class="c-nav-link">NEWS</a></li>
+                    <li class="footer__item"><a href="#" class="c-nav-link">CONTACT</a></li>
+                    <li class="footer__item footer__item--sns">
+                        <a href="#"  class="c-sns-link footer__link--instagram">
                             <img src="assets/images/parts/icon_instagram.svg" alt="イロイロ・テーブルウェア公式インスタグラムを見る">
                         </a>
-                    </li>
-                    <li class="footer__item">
-                        <a href="#"  class="c-facebook-btn footer__link--facebook">
+                        <a href="#"  class="c-sns-link footer__link--facebook">
                             <img src="assets/images/parts/icon_facebook.svg" alt="イロイロ・テーブルウェア公式フェイスブックを見る">
                         </a>
                     </li>
@@ -214,11 +219,14 @@
                 <span class="visually-hidden">iroiro tableware(イロイロ・テーブルウェア)</span>
                 <img class="footer__topic" src="assets/images/parts/logo.svg" alt="">
             </a>
-            <p class="copy"><small>&copy; 2025 iroiro tableware</small></p>
+            <p class="copy"><small>&copy; 2026 iroiro tableware</small></p>
         </footer>
     </div>  
-    <script>
-        // JavaScriptは後ほど実装
-    </script>
+    
+    <button id="js-pagetop" class="c-pagetop-btn" type="button" aria-label="ページトップへ戻る">TOP</button>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
