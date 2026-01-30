@@ -44,11 +44,13 @@
                     <button class="nav__btn nav__btn--close" type="button" aria-label="メニューを閉じる"><img src="assets/images/parts/btn_close.svg" alt=""></button>
                 </div>
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#about" class="c-nav-link">ABOUT</a></li>
-                    <li class="nav__item"><a href="#product" class="c-nav-link">PRODUCT</a></li>
-                    <li class="nav__item"><a href="#" class="c-nav-link">SHOPLIST</a></li>
-                    <li class="nav__item"><a href="#news" class="c-nav-link">NEWS</a></li>
-                    <li class="nav__item"><a href="#" class="c-nav-link">CONTACT</a></li>
+                    <div class="nav__list-primary">
+                      <li class="nav__item"><a href="#about" class="c-nav-link">ABOUT</a></li>
+                      <li class="nav__item"><a href="#product" class="c-nav-link">PRODUCT</a></li>
+                      <li class="nav__item"><a href="#" class="c-nav-link">SHOPLIST</a></li>
+                      <li class="nav__item"><a href="#news" class="c-nav-link">NEWS</a></li>
+                      <li class="nav__item"><a href="#" class="c-nav-link">CONTACT</a></li>
+                    </div>
                     <li class="nav__item">
                         <div class="nav__sns-links">
                             <a href="#"  class="c-sns-link nav__link--facebook">
@@ -69,14 +71,14 @@
                     <div class="swiper main-visual__swiper">
                         <ul class="swiper-wrapper main-visual__slides" aria-roledescription="carousel">
                             <li class="swiper-slide main-visual__slide is-active" aria-hidden="false">
-                                <img src="assets/images/photo/main_visual-01.jpeg" alt="俯瞰の視点で、カラフルな平皿が横一列に並んでいる">
+                                <img src="assets/images/photo/main_visual-01.jpeg" alt="俯瞰の視点で、水色の木製テーブルの上に黄色の平皿が一枚">
                             </li>
                             <li class="swiper-slide main-visual__slide" aria-hidden="true">
                                 <img src="assets/images/photo/main_visual-02.jpeg" alt="色とりどりのサーモマグが浮かんでいる">
                             </li>
                             <li class="swiper-slide 
                             main-visual__slide" aria-hidden="true">
-                                <img src="assets/images/photo/main_visual-03.jpeg" alt="水色のテーブルに様々な色のアイスキャンディーを載せた平皿が所狭しと並んでいる">
+                                <img src="assets/images/photo/main_visual-03.jpeg" alt="ブラウンの木の背景、手前にカラフルなボウルが積んである">
                             </li>
                         </ul>
                     </div>
@@ -124,6 +126,8 @@
                 <section id="osusume" class="section section--osusume">
                     <h2 class="section-title">iroiro<br>osusume</h2>
                     <div class="iroiro-osusume__contents swiper iroiro-osusume__swiper">
+                        <button class="iroiro-osusume__arrow iroiro-osusume__arrow--prev" type="button" aria-controls="slide-items" aria-label="前へ">&lt;</button>
+                        <button class="iroiro-osusume__arrow iroiro-osusume__arrow--next" type="button" aria-controls="slide-items" aria-label="次へ">&gt;</button>
                         <ul class="iroiro-osusume__items swiper-wrapper" id="slide-items">
                             <li class="iroiro-osusume__item swiper-slide">
                                 <div class="iroiro-osusume__body">
@@ -149,8 +153,6 @@
                                 <h3 class="iroiro-osusume__product-name">お猪口<br>各種</h3>
                             </li>
                         </ul>
-                        <button class="iroiro-osusume__arrow iroiro-osusume__arrow--prev" type="button" aria-controls="slide-items" aria-label="前へ">&lt;</button>
-                        <button class="iroiro-osusume__arrow iroiro-osusume__arrow--next" type="button" aria-controls="slide-items" aria-label="次へ">&gt;</button>
                         <div class="iroiro-osusume__controls">
                             <!-- nav + moreボタン -->
                             <div class="iroiro-osusume__header">
@@ -161,13 +163,15 @@
                 </section>
                 <!-- about -->
                 <section id="about" class="section section--about">
-                    <h2 class="section-title">ABOUT<br>iroiro<br>tableware</h2>
-                    <ul class="about__concept-list">
-                        <li class="about__concept-item about__concept-item--blue">つかう<br>楽しみ</li>
-                        <li class="about__concept-item about__concept-item--yellow">彩る<br>ひととき</li>
-                        <li class="about__concept-item about__concept-item--red">うつわ<br>ラブ</li>
-                        <li class="about__concept-item about__concept-item--green">つながる<br>うつわ</li>
-                    </ul>
+                    <div class="about__flex-container">
+                        <h2 class="section-title">ABOUT<br>iroiro<br>tableware</h2>
+                        <ul class="about__concept-list">
+                            <li class="about__concept-item about__concept-item--blue">つかう<br>楽しみ</li>
+                            <li class="about__concept-item about__concept-item--yellow">彩る<br>ひととき</li>
+                            <li class="about__concept-item about__concept-item--red">うつわ<br>ラブ</li>
+                            <li class="about__concept-item about__concept-item--green">つながる<br>うつわ</li>
+                        </ul>
+                    </div>
                     <p class="about__concept-text">今日はどの色にしよう。<br>器ひとつで、気分も食卓も カラフルに。<br>iroiroは暮らしをもっと明るくするブランドです。</p>
                     <a href="#" class="c-btn about__btn">AND MORE</a>
                 </section>
@@ -223,7 +227,10 @@
         </footer>
     </div>  
     
-    <button id="js-pagetop" class="c-pagetop-btn" type="button" aria-label="ページトップへ戻る">TOP</button>
+    <button id="js-pagetop" class="c-pagetop-btn" type="button" aria-label="ページトップへ戻る">
+        <span class="c-pagetop-btn__icon"></span>
+        <span class="c-pagetop-btn__text">TOP</span>
+    </button>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
