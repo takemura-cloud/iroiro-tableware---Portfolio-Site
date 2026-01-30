@@ -18,7 +18,7 @@
 - 特にセマンティックHTMLとBEM設計に注力
 
 ## デモ
-現在制作中です。
+[公開URLはこちら](https://takemura-cloud.github.io/iroiro-tableware---Portfolio-Site/iroiro_tableware/)
 
 ## スクリーンショット
 メインビジュアル  
